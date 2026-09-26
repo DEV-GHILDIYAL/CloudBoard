@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Custom scrollbar styles for panels */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2d3e #0f1117;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2d3e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3d54;
+}
+
+/* CloudBoard Global Overrides — scoped, not global text-decoration reset */
+.sidebar-category-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  padding: 10px 16px 6px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.sidebar-category-label {
+  color: #94a3b8 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  max-width: none !important;
+  width: auto !important;
+}
+
+/* Rich Notes Editor styles */
+.notes-editor:empty:before {
+  content: "Start writing... Use the toolbar above for bold, lists, headings, links and more.";
+  color: #2a2d3e;
+  pointer-events: none;
+}
+
+.notes-editor h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0.75em 0 0.3em;
+  border-bottom: 1px solid #2a2d3e;
+  padding-bottom: 0.2em;
+}
+
+.notes-editor h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin: 0.65em 0 0.25em;
+}
+
+.notes-editor p {
+  margin: 0.4em 0;
+}
+
+.notes-editor ul {
+  list-style: disc;
+  padding-left: 1.5em;
+  margin: 0.4em 0;
+}
+
+.notes-editor ol {
+  list-style: decimal;
+  padding-left: 1.5em;
+  margin: 0.4em 0;
+}
+
+.notes-editor li {
+  margin: 0.2em 0;
+}
+
+.notes-editor code {
+  background: #1e2030;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.88em;
+  color: #a5b4fc;
+}
+
+.notes-editor a {
+  color: #6366f1;
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+.notes-editor hr {
+  border: none;
+  border-top: 1px solid #2a2d3e;
+  margin: 12px 0;
+}
+
+.notes-editor blockquote {
+  border-left: 3px solid #6366f1;
+  padding-left: 1em;
+  color: #94a3b8;
+  margin: 0.5em 0;
+}
